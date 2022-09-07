@@ -1,0 +1,26 @@
+React-(Front End)
+1. End User -Shrikant
+2. Donor , compnay -satyjeeet Aniket
+3. Admin -Anmol
+
+
+Back-end
+(Express + Spring Boot)
+
+1. Admin BackEnd-Express
+
+2. ream whole BackEnd In Spring Boot
+end user -shirkant
+donor ,company- styjeet Aniket Anmol
+
+3 Admin
+Express
+
+
+
+10-12 today night
+DataBase desgin 
+
+gitHub Id
+1.
+2.
