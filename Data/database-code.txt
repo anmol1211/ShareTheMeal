@@ -1,0 +1,38 @@
+mysql> create database sharethemeal;
+
+mysql> use sharethemeal;
+Database changed
+mysql> create table city(cityname varchar(45),citypincode int primary key)
+    -> ;
+Query OK, 0 rows affected (1.47 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_sharethemeal |
++------------------------+
+| city                   |
++------------------------+
+1 row in set (0.30 sec)
+
+mysql> desc city;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| cityname    | varchar(45) | YES  |     | NULL    |       |
+| citypincode | int         | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+2 rows in set (0.04 sec)
+
+
+mysql> create table donor(rid int primary key,rname varchar(100),raddr varchar(100),rphone varchar(12),remail varchar(45),rpassword varchar(100),citypincode int, FOREIGN key(citypincode) REFERENCES city(citypincode));
+Query OK, 0 rows affected (0.55 sec)
+
+
+mysql> create table donorfood(fid int primary key,fqty varchar(45),rid int ,foreign key(rid) references donor(rid));
+Query OK, 0 rows affected (0.38 sec)
+
+
+
+
+satyjeet---
+

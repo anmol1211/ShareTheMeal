@@ -1,0 +1,45 @@
+mysql> create table companies(coId int auto_increment primary key, coName varchar(30),coAddress varchar(45),coPhone char(12),coEmail varchar(45),coPaassword varchar(30), cityPincode int forign key references city(cityPincode));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'forign key references city(cityPincode))' at line 1
+mysql> create table companies(coId int auto_increment primary key, coName varchar(30),coAddress varchar(45),coPhone char(12),coEmail varchar(45),coPaassword varchar(30), cityPincode int, foreign key(cityPincode) references city(cityPincode));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table foodproduct(fpId int auto_increment primary key, fpName varchar(30), fpPrice int, fpQty int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc companies;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| coId        | int         | NO   | PRI | NULL    | auto_increment |
+| coName      | varchar(30) | YES  |     | NULL    |                |
+| coAddress   | varchar(45) | YES  |     | NULL    |                |
+| coPhone     | char(12)    | YES  |     | NULL    |                |
+| coEmail     | varchar(45) | YES  |     | NULL    |                |
+| coPaassword | varchar(30) | YES  |     | NULL    |                |
+| cityPincode | int         | YES  | MUL | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> desc food product
+    -> ^C
+mysql> desc foodproduct;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| fpId    | int         | NO   | PRI | NULL    | auto_increment |
+| fpName  | varchar(30) | YES  |     | NULL    |                |
+| fpPrice | int         | YES  |     | NULL    |                |
+| fpQty   | int         | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc city;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| cityName    | varchar(30) | YES  |     | NULL    |       |
+| citypincode | int         | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+m

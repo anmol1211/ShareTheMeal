@@ -1,0 +1,15 @@
+
+          create table product(pid int not null auto_increment,pname varchar(30),primary key(pid));
+		  
+-----------------------------------------------------------------------------------------------------------------------		  
+
+         create table orderInfo(custid int not null,pid int not null,prodqty int(10),primary key(custid,pid));
+	
+-----------------------------------------------------------------------------------------------------------------------	
+		 
+		  create table orders(oid int not null auto_increment,orderdate date,orderstatus varchar(25),cid int,primary key(oid),foreign key(cid) references customers(cid)) ;
+		  
+		  
+-----------------------------------------------------------------------------------------------------------------------	  
+		  
+		   create table customers(cid int not null auto_increment,cname varchar(50),cphone int(10),cemail varchar(60),cpassword varchar(30),citypincode int(10),primary key(cid),foreign key(citypincode) references city(citypincode));
