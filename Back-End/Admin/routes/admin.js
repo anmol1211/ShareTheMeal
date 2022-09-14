@@ -7,9 +7,11 @@ const utils = require('../utils')
 
 const router = express.Router()
 
-router.get('/donor', (request, response) => {
+router.get('/', (request, response) => {
   console.log(request.id)
-  const statement = `select rid,rname, raddr, rphone, remail,citypincode from donor where id = ${request.id}`
+  //aid | fname | lname  | email                    | password                                                         | phone      | bod
+  const statement = `select aid,fname, lname, email, password,phone,bod from admin where aid = 2`
+  //  ${request.id}
   
   db.execute(statement, (error, data) => {
     response.send(utils.createResult(error, data))

@@ -21,11 +21,13 @@ app.use((request, response, next) => {
   // signin and signup
 
   if (
+    request.url == '/' ||
+    request.url == '/admin' ||
     request.url == '/admin/signin' ||
     request.url == '/admin/signup' ||
     request.url == '/admin/adddonor' ||
-    request.url == '/admin/donor' ||
     request.url.startsWith('/admin/verify') ||
+    request.url.startsWith('/admin') ||
     request.url.startsWith('/admin/status')
   ) {
     // skip checking the token
@@ -56,10 +58,10 @@ app.use((request, response, next) => {
 
 // add routers
 app.use('/admin', routerUser)
-//app.use('/notes', routerNotes)
+
 
 app.get('/', (request, response) => {
-  response.send('welcome to notes application')
+  response.send('welcome to ShareTheMeal application')
 })
 
 app.listen(4000, '0.0.0.0', () => {
