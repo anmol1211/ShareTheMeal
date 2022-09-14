@@ -1,0 +1,8 @@
+Donor:
+1.login
+2.Sign Up
+3.Add Food -
+4.serach all
+5.delete donor
+6.update donor
+7.findByEmail

@@ -1,10 +1,17 @@
 package com.infoway.services;
 
+import java.util.List;
+
 import com.infoway.entites.Donor;
 
 public interface DonorService {
 	
 	
 	Donor findByEmail(String remail);
-	Donor authenticate(String email, String password);
+	 Donor save(Donor donor);
+	 Donor findEamil(Donor donor);
+	 List<Donor> findAll();
+	 boolean deleteById(int id);
+	 Donor update(Donor b);
+	 
 }

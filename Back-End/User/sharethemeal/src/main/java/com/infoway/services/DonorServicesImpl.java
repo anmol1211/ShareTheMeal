@@ -1,9 +1,11 @@
 package com.infoway.services;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+
 import org.springframework.stereotype.Service;
 
 import com.infoway.daos.DonorDao;
@@ -20,17 +22,14 @@ public class DonorServicesImpl implements DonorService {
 //	@Autowired
 //	private PasswordEncoder passwordEncoder;
 	
-	@Autowired
-	private PasswordEncoder passwordEncoder;
+//	@Autowired
+//	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	private DonorService donor;
 	
 	
-//	@Override
-//	public Donor findByEmail(String email) {
-//		return donorDao.findByRemail(email);
-//	}
+
 	
 	
 	@Override
@@ -38,21 +37,61 @@ public class DonorServicesImpl implements DonorService {
 		// TODO Auto-generated method stub
 		return donorDao.findByRemail(remail);
 	}
+
+
+
+
+
 	@Override
-	public Donor authenticate(String email, String password) {
-		// TODO Auto-generated method stub
-		Donor donor = findByEmail(email);
-		if(donor != null && passwordEncoder.matches(password, donor.getRpassword()))
-			return donor;
-		return null;
+	public Donor save(Donor donor) {
+		
+		return donorDao.save(donor);
 	}
+
+
+
+
+
+	@Override
+	public Donor findEamil(Donor donor) {
+		// TODO Auto-generated method stub
+		return donorDao.findByRemailAndRpassword(donor.getRemail(), donor.getRpassword());
+	}
+
+
+
+
+
+	@Override
+	public List<Donor> findAll() {
+		// TODO Auto-generated method stub
+		return donorDao.findAll();
+	}
+
+
+
+
+
+	@Override
+	public boolean deleteById(int id) {
+		// TODO Auto-generated method stub
+		if(donorDao.existsById(id)) {
+			donorDao.deleteByRid(id);
+			return true;
+		}
+		return false;
+	}
+
+
+
+
+
+	@Override
+	public Donor update(Donor b) {
+		// TODO Auto-generated method stub
+		return donorDao.save(b);
+	}
+	
 
 }
 
-//@Override
-//public Customer authenticate(String email, String password) {
-//	Customer cust = findByEmail(email);
-//	if(cust != null && passwordEncoder.matches(password, cust.getPassword()))
-//		return cust;
-//	return null;
-//}
