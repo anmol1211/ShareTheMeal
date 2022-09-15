@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,7 @@ public class DonorDtoRestController {
 	}
 	
 	@PostMapping("/donors/registerUser")
+	//@DeleteMapping("/donors/registerUser")
 	private String registerUser(@RequestBody Donor donor) {
 		
 		donorServices.save(donor);
@@ -71,4 +73,15 @@ public class DonorDtoRestController {
 			List<Donor> list = donorServices.findAll();
 			return ResponseEntity.ok(list);
 		}
+	 
+//	 @GetMapping("/donors/id/{id}")
+	 @DeleteMapping("/donors/id/{id}")
+		public boolean findByEmail(@PathVariable("id") int id) {
+			boolean res = donorServices.deleteById(id);
+//			if(donor == null)
+//				return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+			return res;
+		}
+	 
+	 
 }
