@@ -91,6 +91,16 @@ public class DonorServicesImpl implements DonorService {
 		// TODO Auto-generated method stub
 		return donorDao.save(b);
 	}
+
+
+
+
+
+	@Override
+	public Donor findByRid(int id) {
+		// TODO Auto-generated method stub
+		return donorDao.findByRid(id);
+	}
 	
 
 }

@@ -1,7 +1,11 @@
 package com.infoway.entites;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,10 +20,13 @@ public class Donor {
 	 private String remail;     
 	 private String rpassword;  
 	 private int citypincode;
+//	 @OneToMany(mappedBy = "donor")
+//	 private List<Food> foodList;
 	 
 	 
 	 public Donor() {
 		// TODO Auto-generated constructor stub
+//		 this.foodList= new ArrayList<Food>();
 	}
 
 
@@ -33,6 +40,32 @@ public class Donor {
 		this.rpassword = rpassword;
 		this.citypincode = citypincode;
 	}
+	
+	
+
+
+//	public List<Food> getFoodList() {
+//		return foodList;
+//	}
+//
+//
+//	public void setFoodList(List<Food> foodList) {
+//		this.foodList = foodList;
+//	}
+
+
+//	public Donor(int rid, String rname, String raddr, String rphone, String remail, String rpassword, int citypincode,
+//			List<Food> foodList) {
+//		super();
+//		this.rid = rid;
+//		this.rname = rname;
+//		this.raddr = raddr;
+//		this.rphone = rphone;
+//		this.remail = remail;
+//		this.rpassword = rpassword;
+//		this.citypincode = citypincode;
+//		//this.foodList = foodList;
+//	}
 
 
 	public int getRid() {

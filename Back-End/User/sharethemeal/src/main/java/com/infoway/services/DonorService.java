@@ -13,5 +13,5 @@ public interface DonorService {
 	 List<Donor> findAll();
 	 boolean deleteById(int id);
 	 Donor update(Donor b);
-	 
+	 Donor findByRid(int id);
 }

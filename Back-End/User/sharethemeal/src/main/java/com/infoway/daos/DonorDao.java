@@ -12,5 +12,6 @@ public interface DonorDao extends JpaRepository<Donor, Integer> {
 	Donor findByRemailAndRpassword(String remail,String rpassword);
 	List<Donor> findAll();
 	void deleteByRid(int id);
+	Donor findByRid(int id);
 
 }

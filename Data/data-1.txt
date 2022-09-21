@@ -1,0 +1,12 @@
+admin  done express     
+city   done     
+companies   
+customers   
+donor   done express + spring   
+donorfood done spring  
+donors  done express + spring    
+foodproduct 
+orderinfo   
+orders      
+product     
+user     same as admin express   
