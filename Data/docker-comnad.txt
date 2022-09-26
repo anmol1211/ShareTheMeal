@@ -1,0 +1,30 @@
+docker image build -t node-app .
+docker container run -itd --name nodeapp -p 4000:4000 node-app
+
+Dockerfile
+
+FROM node:15.13-alpine
+WORKDIR /core
+ENV PATH="./node_modules/.bin:$PATH"
+COPY . .
+RUN npm run build
+
+
+
+docker-compose.yml
+
+
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/core
+    ports:
+      - 3000:3000
+    image: app:react
+    container_name: react_container
+    command: npm start
+
+

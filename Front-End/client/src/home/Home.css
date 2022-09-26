@@ -1,0 +1,8 @@
+.spot-banner {
+  background: url("https://cdn.givind.org/static/images/campaign/target-image1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 80vh;
+}

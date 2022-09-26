@@ -1,0 +1,68 @@
+
+.main {
+  background-image: url("https://previews.123rf.com/images/addtodsaporn/addtodsaporn1910/addtodsaporn191000201/133549228-helping-the-poor-in-society-by-sharing-food-charity-the-concept-of-food-donation-and-food-needs.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.abc {
+  border: 2ps solid black;
+}
+h3,
+h5 {
+  color: white;
+}
+.mynav {
+  position: sticky;
+}
+.main {
+  width: 100%;
+  padding-top: 60px;
+  
+}
+.main1 {
+  width: 100%;
+  padding-top: 50px;
+ 
+  height: 680px;
+  background-image: url("https://images.unsplash.com/photo-1447233053706-4d987282231b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login {
+  
+  background: rgba(0, 0, 0, 0.3) !important;
+
+  filter: drop-shadow(0px 10px 4px black);
+  border-radius: 5px;
+}
+
+button {
+  color: white !important;
+}
+.navBtnLogin {
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #1c314f;
+  color: white;
+  border-color: transparent;
+}
+.navBtnReg {
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #f16c16;
+  color: white;
+  border-color: transparent;
+}
+.rdo input {
+  padding: 10px;
+  color: white;
+  border: 2px solid white;
+}
+.reg {
+  color: white;
+}
+.rdo {
+  margin: 20px;
+  color: white;
+}

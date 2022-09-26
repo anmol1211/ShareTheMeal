@@ -1,6 +1,6 @@
 admin  done express     
 city   done     
-companies   
+companies done in spring 
 customers   
 donor   done express + spring   
 donorfood done spring  
@@ -9,4 +9,10 @@ foodproduct
 orderinfo   
 orders      
 product     
-user     same as admin express   
+user     same as admin express 
+
+
+
+
+
+on  

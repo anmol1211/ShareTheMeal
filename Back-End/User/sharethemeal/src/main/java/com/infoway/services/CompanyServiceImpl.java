@@ -27,7 +27,7 @@ public class CompanyServiceImpl implements CompnayInteface {
 	@Override
 	public Companies save(Companies d) {
 		// TODO Auto-generated method stub
-		return null;
+		return cDao.save(d);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class CompanyServiceImpl implements CompnayInteface {
 	@Override
 	public List<Companies> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return cDao.findAll();
 	}
 
 	@Override
